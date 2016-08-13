@@ -2,8 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'toastr/build/toastr.min.css';
+
 import * as toastr from 'toastr/build/toastr.min.js';
 
 Vue.config.productionTip = false
