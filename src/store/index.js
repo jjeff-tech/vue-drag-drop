@@ -32,8 +32,273 @@ export default new Vuex.Store({
   actions: {
     async getContentBlockTemplates({ commit }) {
       const result = {
-          "data": [],
-          "meta": {}
+          "data": [
+              {
+                  "id": 645,
+                  "templateKey": "text",
+                  "name": "Text",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:14:28.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Use for single lines of text",
+                  "icon": ""
+              },
+              {
+                  "id": 646,
+                  "templateKey": "text_area",
+                  "name": "Text Area",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:14:28.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Add a paragraph text",
+                  "icon": ""
+              },
+              {
+                  "id": 647,
+                  "templateKey": "heading",
+                  "name": "Heading",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:14:28.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Create a section to organize your content",
+                  "icon": ""
+              },
+              {
+                  "id": 648,
+                  "templateKey": "list",
+                  "name": "Create a List",
+                  "contentEntryType": "multiple",
+                  "jsonTemplate": {
+                      "content": {
+                          "text": "",
+                          "subtitle": "",
+                          "orderNumber": 0
+                      }
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:14:28.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Ads with lists of features do 60% better",
+                  "icon": ""
+              },
+              {
+                  "id": 649,
+                  "templateKey": "building_description",
+                  "name": "Building Description",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": "{building.buildingOverview}"
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:14:28.000Z",
+                  "createdUserId": 1,
+                  "modified": "2020-08-11T19:44:55.000Z",
+                  "modifiedUserId": null,
+                  "description": "Add your building description",
+                  "icon": ""
+              },
+              {
+                  "id": 650,
+                  "templateKey": "suite_description",
+                  "name": "Suite Description",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": "{suite.description}"
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:14:28.000Z",
+                  "createdUserId": 1,
+                  "modified": "2020-08-11T19:44:55.000Z",
+                  "modifiedUserId": null,
+                  "description": "Add your suite description",
+                  "icon": ""
+              },
+              {
+                  "id": 651,
+                  "templateKey": "amenities",
+                  "name": "Amenities",
+                  "contentEntryType": "multiple",
+                  "jsonTemplate": {
+                      "content": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:23:58.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Select amenities to add",
+                  "icon": ""
+              },
+              {
+                  "id": 652,
+                  "templateKey": "tr_building_description",
+                  "name": "Translated Building Description",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": "#TRANSLATE@fr:buildings.building_overview#",
+                      "condition": [
+                          {
+                              "data": "building.city.province.provinceCode",
+                              "value": "QC",
+                              "compare": "=="
+                          }
+                      ]
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:14:28.000Z",
+                  "createdUserId": 1,
+                  "modified": "2020-10-29T20:01:39.000Z",
+                  "modifiedUserId": null,
+                  "description": "Add your building description",
+                  "icon": ""
+              },
+              {
+                  "id": 653,
+                  "templateKey": "tr_amenities",
+                  "name": "Translated Amenities",
+                  "contentEntryType": "multiple",
+                  "jsonTemplate": {
+                      "content": "",
+                      "condition": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:23:58.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Select amenities to add",
+                  "icon": ""
+              },
+              {
+                  "id": 654,
+                  "templateKey": "phone",
+                  "name": "Phone",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": "",
+                      "condition": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:23:58.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Add phone number",
+                  "icon": ""
+              },
+              {
+                  "id": 655,
+                  "templateKey": "email",
+                  "name": "Email",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": "",
+                      "condition": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:23:58.000Z",
+                  "createdUserId": 1,
+                  "modified": null,
+                  "modifiedUserId": null,
+                  "description": "Add email address",
+                  "icon": ""
+              },
+              {
+                  "id": 656,
+                  "templateKey": "utilities",
+                  "name": "Utilities",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": "",
+                      "settings": {
+                          "style": "list",
+                          "styles": [
+                              "list",
+                              "comma"
+                          ]
+                      },
+                      "condition": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:23:58.000Z",
+                  "createdUserId": 1,
+                  "modified": "2020-09-30T15:37:18.000Z",
+                  "modifiedUserId": null,
+                  "description": "Add utilities",
+                  "icon": ""
+              },
+              {
+                  "id": 657,
+                  "templateKey": "promotions",
+                  "name": "Promotions",
+                  "contentEntryType": "static",
+                  "jsonTemplate": {
+                      "content": "Fallback Value ( If no promotions, this should be displayed. )",
+                      "options": "{hideTitle: false, hideDetails: false}",
+                      "condition": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:23:58.000Z",
+                  "createdUserId": 1,
+                  "modified": "2020-09-28T15:37:58.000Z",
+                  "modifiedUserId": null,
+                  "description": "Add promotions",
+                  "icon": ""
+              },
+              {
+                  "id": 658,
+                  "templateKey": "custom_fields",
+                  "name": "Custom Field",
+                  "contentEntryType": "single",
+                  "jsonTemplate": {
+                      "content": {
+                          "key": "",
+                          "tableName": ""
+                      },
+                      "condition": ""
+                  },
+                  "status": "enabled",
+                  "created": "2020-02-24T21:23:58.000Z",
+                  "createdUserId": 1,
+                  "modified": "2020-09-30T15:31:05.000Z",
+                  "modifiedUserId": null,
+                  "description": "Add custom field",
+                  "icon": ""
+              }
+          ],
+          "meta": {
+              "links": {
+                  "self": "http://localhost:7005/api/v1/content-block-templates?page=1&limit=25",
+                  "prev": null,
+                  "next": null,
+                  "last": "http://localhost:7005/api/v1/content-block-templates?page=1&limit=25",
+                  "first": "http://localhost:7005/api/v1/content-block-templates?page=1&limit=25"
+              },
+              "totalRecords": 14,
+              "totalPages": 1,
+              "recordsPerPage": 25,
+              "currentPage": 1
+          }
       };
       
       commit('setContentBlockTemplates', result.data);
