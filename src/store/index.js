@@ -570,33 +570,5 @@ export default new Vuex.Store({
     };
       commit('setContentBlocks', result.data);
     },
-
-    async getGroupSettingValues({ commit }, group) {
-      const ids = group.value.replace(/[|]/g, '');
-      const result = await get(`/${group.model}?id~in=${ids}`);
-      return result.data;  
-    },
-
-    async saveContentBlocks({ commit, state }) {
-      let orderNumber = 1;
-      for(const block of state.contentBlocks) {
-        block.orderNumber = orderNumber;
-        orderNumber = orderNumber + 1;
-        if(block.id.toString().includes('new_')) {
-          delete block.id;
-        }
-      }
-      const result = await post('/content_blocks', state.contentBlocks);
-      commit('setContentBlocks', result.data);
-    },
-
-    async removeContentBlock({ commit, state }, index) {
-      const data = state.contentBlocks[index];
-      if(!data.id.toString().includes('new_')) {
-        data.status = 'disabled';
-        await put(`/content_blocks/${data.id}`, data);
-      }
-      state.contentBlocks.splice(index, 1);
-    },
   },
 })
