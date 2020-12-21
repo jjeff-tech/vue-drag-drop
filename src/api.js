@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const prefix = 'http://10.1.1.105:7005/api/v1';
+const prefix = 'http://localhost:7005/api/v1';
 
 export const get = async (endpoint) => {
   try {
